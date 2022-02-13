@@ -52,8 +52,8 @@ public class sendNKVD {
 		@Override
 		public void run() {
 			try {
-				NKVD();
 				IsEscaping();
+				NKVD();
 				log.info("sending NKVD");
 			}catch(Exception e) {
 				
