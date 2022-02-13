@@ -16,6 +16,7 @@ public class sendNKVD {
 	Logger log = Bukkit.getLogger();
 	GetAddNKVD nkvd=new GetAddNKVD();
 	@SuppressWarnings("deprecation")
+	//sends nkvd to all players in enemy list
 	public void NKVD()  {
 		try {
 			for(String name : nkvd.getEnemies()) {
@@ -34,6 +35,7 @@ public class sendNKVD {
 			
 		}
 	}
+	//checks if player tries to escape from USSR 
 	public void IsEscaping() throws Exception {
 		for(Player p:Bukkit.getServer().getOnlinePlayers()) {
 			if(p.getLocation().getBlockY()>150) {

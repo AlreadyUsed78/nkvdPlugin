@@ -24,11 +24,6 @@ public class NKVD extends JavaPlugin{
 	}
 	public List<String> complete(BlockCommandSender sender,String[] args){
 		List<String> list = new ArrayList<>();
-		if(args[1] != "") {
-			list.add("true");
-			list.add("false");
-			return list;
-		}
 		for(Player p : getServer().getOnlinePlayers()) {
 			if(p.getName().contains(args[0])) {
 				list.add(p.getName());

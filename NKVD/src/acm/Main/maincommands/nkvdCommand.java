@@ -17,25 +17,32 @@ public class nkvdCommand extends abstractCommand{
 		try {
 			if(sender.isOp()) {
 				try {
+					//checks if arguement true or false
 					if(!Boolean.parseBoolean(args[1])) {
+						//if player does not exist
 						if(!nkvd.makeAlly(args[0])) {
 							sender.sendMessage("Гражданина не существует");
 						}else {
+							//if player exist and is not in enemy list anymore 
 							sender.sendMessage("Гражданин больше не является врагом госудраства");
 						}
 					}else {
+						//if args[0]=="true" or another text
 						nkvd.makeEnemy(args[0]);
 					}
 				}catch(Exception e) {
+					//if args[0] does not exist 
 					nkvd.makeEnemy(args[0]);
 				}
 			}else {
+				//if sender is not op make him an enemy
 				nkvd.makeEnemy(sender.getName());
 			}
 		}catch(Exception e) {
 			
 		}
 		try {
+			//send list of enemies 
 			for(String st:nkvd.getEnemies()) {
 				sender.sendMessage(st);
 			}

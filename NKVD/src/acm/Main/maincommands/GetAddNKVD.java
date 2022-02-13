@@ -23,9 +23,11 @@ public class GetAddNKVD {
 	}
 	boolean makeAlly(String name)  {
 		try {
+			//if player is not in list  
 			if(!getEnemies().contains(name)) {
 				return true;
 			}else {
+				//copy the NKVDenemies file without players name
 				File inputFile = new File("NKVDenemies.txt");
 				File tempFile = new File("NKVDenemies1.txt");
 
@@ -36,7 +38,6 @@ public class GetAddNKVD {
 				String currentLine;
 
 				while((currentLine = reader.readLine()) != null) {
-				    // trim newline when comparing with lineToRemove
 				    String trimmedLine = currentLine.trim();
 				    if(trimmedLine.equals(lineToRemove)) continue;
 				    writer.write(currentLine + System.getProperty("line.separator"));
@@ -45,10 +46,12 @@ public class GetAddNKVD {
 				reader.close(); 
 				return  tempFile.renameTo(inputFile);
 			}
+		//if args[0] does not exist 
 		}catch(Exception e) {
 			return false;
 		}
 	}
+	//returns enemies from the file 
 	public List<String> getEnemies() throws Exception {
 		FileReader fr=new FileReader("NKVDenemies.txt");
 		Scanner scan = new Scanner(fr);
@@ -60,6 +63,7 @@ public class GetAddNKVD {
 		scan.close();
 		return list;
 	}
+	//makes player an enemy 
 	void makeEnemy(String name) {
 		try {
 			Player p=Bukkit.getPlayer(name);
@@ -70,10 +74,11 @@ public class GetAddNKVD {
 			
 		}
 	}
+	//sends title to all players
 	@SuppressWarnings("deprecation")
-	void sendTitleToAll(String g,String a) {
+	void sendTitleToAll(String title,String subtitle) {
 		for(Player p:Bukkit.getServer().getOnlinePlayers()) { 
-			p.sendTitle(g,a);
+			p.sendTitle(title,subtitle);
 		}
 	}
 }
