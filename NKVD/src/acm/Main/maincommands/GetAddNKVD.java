@@ -14,6 +14,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class GetAddNKVD {
+	//adds players name to the enemy list 
 	public void addEnemy(String text) throws Exception {
 		FileWriter fw=new FileWriter("NKVDenemies.txt",true);
 		if(!getEnemies().contains(text)) {
