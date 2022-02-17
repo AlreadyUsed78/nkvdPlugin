@@ -12,5 +12,7 @@ It is made just for fun, most off messages are on Russian
 * /nkvd Name  makes the player an enemy
 * /nkvd Name true/false  makes the player enemy if true and ally if false
 
-This plugin is made for 1.16.3, but shuld work with later versions
+insipation:[@link1107](https://www.github.com/link1107)
+
+This plugin is made for 1.16.3, but should work with later versions
 video example:https://www.youtube.com/watch?v=XBQv7uzrgAA&t=73s
