@@ -13,5 +13,8 @@
 
 вдохновление :[@link1107](https://www.github.com/link1107)
 
+тг:https://t.me/VikktorDudka
+
 плагин для 1.16.3 но должен работать с более поздними версиями
+
 видео:https://www.youtube.com/watch?v=XBQv7uzrgAA&t=73s
