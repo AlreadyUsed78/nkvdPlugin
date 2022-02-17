@@ -1,18 +1,17 @@
 # nkvdPlugin
-This plugin adds a command /nkvd which makes the player an enemy of USSR 
+плагин добавляет комманду /nkvd которая делает игра врагом госудраства и раз в 30 секунд отправляет за ним НКВД 
 
-It is made just for fun, most off messages are on Russian
-# Features
-* Op can make player USSR enemy
-* If player higher than 150 blocks in air make him an enemy of USSR because for trying to escape the country
-* every 30 seconds spawns NKVD near enemies and checks if someone is trying to escape.
+# Возможности
+* Администраторы могут делать игроков врагами или же товарищами государства
+* Если игрок поднимается выше 150 блоков по Y(осуществляет попытку побега) то он вносится в список врагов
+* Каждые 30 секунд проверяется сбегает ли гражданин и за всеми из списка врагов отправляется НКВД
 
-# Commands
-* /nkvd     returns list of enemy players
-* /nkvd Name  makes the player an enemy
-* /nkvd Name true/false  makes the player enemy if true and ally if false
+# Комманды
+* /nkvd     возвращает список врагом СССР
+* /nkvd Name  Делает игрока врагом государства
+* /nkvd Name true/false  делает игрока врагом если true и товарищем если false
 
-insipation:[@link1107](https://www.github.com/link1107)
+вдохновление :[@link1107](https://www.github.com/link1107)
 
-This plugin is made for 1.16.3, but should work with later versions
-video example:https://www.youtube.com/watch?v=XBQv7uzrgAA&t=73s
+плагин для 1.16.3 но должен работать с более поздними версиями
+видео:https://www.youtube.com/watch?v=XBQv7uzrgAA&t=73s
