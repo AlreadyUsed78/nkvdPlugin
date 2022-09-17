@@ -1,5 +1,0 @@
-name: NKVD
-main: acm.Main.NKVD
-version: 0.1
-commands:
-  nkvd: {}
