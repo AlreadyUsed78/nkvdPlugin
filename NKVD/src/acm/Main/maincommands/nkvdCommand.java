@@ -20,7 +20,7 @@ public class nkvdCommand extends abstractCommand{
 					//checks if arguement true or false
 					if(!Boolean.parseBoolean(args[1])) {
 						//if player does not exist
-						if(!nkvd.makeAlly(args[0])) {
+						if(!GetAddNKVD.makeAlly(args[0])) {
 							sender.sendMessage("Гражданина не существует");
 						}else {
 							//if player exist and is not in enemy list anymore 
@@ -28,28 +28,34 @@ public class nkvdCommand extends abstractCommand{
 						}
 					}else {
 						//if args[0]=="true" or another text
-						nkvd.makeEnemy(args[0]);
+						
+						throw new ArithmeticException();
+						
 					}
 				}catch(Exception e) {
 					//if args[0] does not exist 
-					nkvd.makeEnemy(args[0]);
+					GetAddNKVD.addEnemie(args[0]);
 				}
 			}else {
 				//if sender is not op make him an enemy
-				nkvd.makeEnemy(sender.getName());
+				GetAddNKVD.addEnemie(sender.getName());
 			}
-		}catch(Exception e) {
-			
-		}
+		
+	}catch(Exception e) {
+					
+		
 		try {
 			//send list of enemies 
-			for(String st:nkvd.getEnemies()) {
+			for(String st:GetAddNKVD.getEnemies()) {
 				sender.sendMessage(st);
 			}
-		}catch(Exception e) {
+		}catch(Exception a) {
 			
 		}
-	}
+}
+			
+}
+
 
 	@Override
 	public List<String> onTabComplete(CommandSender arg0, Command arg1, String arg2, String[] arg3) {

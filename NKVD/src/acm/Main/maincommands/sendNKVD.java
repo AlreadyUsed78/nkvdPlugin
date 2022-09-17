@@ -36,23 +36,11 @@ public class sendNKVD {
 		}
 	}
 	//checks if player tries to escape from USSR 
-	public void IsEscaping() throws Exception {
-		for(Player p:Bukkit.getServer().getOnlinePlayers()) {
-			if(p.getLocation().getBlockY()>150) {
-				if(nkvd.getEnemies().contains(p.getName())){
-					nkvd.sendTitleToAll(ChatColor.RED+"Гражданин "+p.getName(),"пытается покинуть СССР");
-				}else {
-					nkvd.makeEnemy(p.getName());
-				}
-			}
-		}
-	}
-	
+		
 	public BukkitRunnable runnable = new BukkitRunnable() {
 		@Override
 		public void run() {
 			try {
-				IsEscaping();
 				NKVD();
 				log.info("sending NKVD");
 			}catch(Exception e) {

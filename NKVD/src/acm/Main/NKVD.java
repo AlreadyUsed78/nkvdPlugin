@@ -18,6 +18,9 @@ public class NKVD extends JavaPlugin{
 		new nkvdCommand();
 		sendNKVD send = new sendNKVD();
 		send.runnable.runTaskTimer(this, 1L, 600);
+		getServer().getPluginManager().registerEvents(new eventListener(), this);
+
+		
 	}
 	public static NKVD getInstance() {
 		return instance;
