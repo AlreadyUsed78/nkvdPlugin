@@ -1,4 +1,4 @@
-package acm.Main.maincommands;
+package acm.Main.konvoy;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -75,7 +75,7 @@ public class GetAddNKVD {
 	
 	//sends title to all players
 	@SuppressWarnings("deprecation")
-	static void sendTitleToAll(String title,String name,String subtitle) {
+	public static void sendTitleToAll(String title,String subtitle) {
 		for(Player p:Bukkit.getServer().getOnlinePlayers()) { 
 			p.sendTitle(title,subtitle);
 		}
@@ -91,9 +91,13 @@ public class GetAddNKVD {
 		
 	}
 	
-	public static void addEnemie(String name) throws Exception {
+	public static boolean addEnemie(String name) throws Exception {
+		if(getEnemies().contains(name)) {
+			return true;
+		}
 		writeEnemy(name);
-		sendTitleToAll(ChatColor.RED+"Гражданин ",name,"был признан врагом СССР");
+		sendTitleToAll(ChatColor.RED+"Гражданин "+name,"был признан врагом СССР");
+		return false;
 	}
 	public static boolean makeAlly(String name) {
 		try {

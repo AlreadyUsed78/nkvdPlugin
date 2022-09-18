@@ -1,4 +1,4 @@
-package acm.Main.maincommands;
+package acm.Main.events;
 import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
@@ -7,8 +7,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import acm.Main.konvoy.GetAddNKVD;
 
-public class eventListener implements Listener{
+
+public class movementEventListener implements Listener{
 
 	@EventHandler
 	public void onMove(PlayerMoveEvent e) throws Exception {
@@ -33,7 +35,7 @@ public class eventListener implements Listener{
 			if(p.getLocation().getBlockY()>150 && !GetAddNKVD.getEnemies().contains(p.getDisplayName())) {
 					GetAddNKVD.addEnemie(p.getDisplayName());
 				
-					GetAddNKVD.sendTitleToAll(ChatColor.RED+"Гражданин ",p.getName(),"пытается покинуть СССР");
+					GetAddNKVD.sendTitleToAll(ChatColor.RED+"Гражданин "+p.getName(),"пытается покинуть СССР");
 					GetAddNKVD.setEnemies();
 			}
 	}

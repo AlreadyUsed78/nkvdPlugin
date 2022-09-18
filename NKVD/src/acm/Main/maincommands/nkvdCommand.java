@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.*;
+import acm.Main.konvoy.*;
+
 public class nkvdCommand extends abstractCommand{
 	Logger log = Bukkit.getLogger();
 	GetAddNKVD nkvd=new GetAddNKVD();

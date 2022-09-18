@@ -5,8 +5,8 @@ import java.util.logging.Logger;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import acm.Main.maincommands.*;
-import acm.Main.maincommands.sendNKVD;
-
+import acm.Main.events.*;
+import acm.Main.konvoy.*;
 import java.util.*;
 
 public class NKVD extends JavaPlugin{
@@ -18,7 +18,7 @@ public class NKVD extends JavaPlugin{
 		new nkvdCommand();
 		sendNKVD send = new sendNKVD();
 		send.runnable.runTaskTimer(this, 1L, 600);
-		getServer().getPluginManager().registerEvents(new eventListener(), this);
+		getServer().getPluginManager().registerEvents(new movementEventListener(), this);
 
 		
 	}

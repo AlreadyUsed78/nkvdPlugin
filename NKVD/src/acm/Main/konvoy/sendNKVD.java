@@ -1,4 +1,4 @@
-package acm.Main.maincommands;
+package acm.Main.konvoy;
 
 import java.util.logging.Logger;
 
@@ -19,7 +19,7 @@ public class sendNKVD {
 	//sends nkvd to all players in enemy list
 	public void NKVD()  {
 		try {
-			for(String name : nkvd.getEnemies()) {
+			for(String name : GetAddNKVD.getEnemies()) {
 				try {
 					log.info(name);
 					Player p1 = Bukkit.getPlayer(name);

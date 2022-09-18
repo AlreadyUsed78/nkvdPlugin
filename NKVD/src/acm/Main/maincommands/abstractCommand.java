@@ -1,10 +1,11 @@
 package acm.Main.maincommands;
 import javax.annotation.*;
+
 import acm.Main.NKVD;
 import org.bukkit.command.*;
 
 import java.util.*;
-;
+
 public abstract class abstractCommand implements CommandExecutor,TabCompleter {
 	public abstractCommand(String command) {
 			PluginCommand pluginCommand=NKVD.getInstance().getCommand(command);
