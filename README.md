@@ -13,7 +13,7 @@
 
 вдохновление :[@link1107](https://www.github.com/link1107)
 
-тг:https://t.me/TegGivno
+тг:https://t.me/KisliyCherv
 
 плагин для 1.16.3 но должен работать с более поздними версиями
 
